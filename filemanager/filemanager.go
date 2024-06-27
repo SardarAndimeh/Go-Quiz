@@ -5,11 +5,6 @@ import (
 	"os"
 )
 
-type Quiz struct {
-	Question string
-	Answer   string
-}
-
 func CsvReader() ([][]string, error) {
 
 	file, err := os.Open("quizfile/quiz.csv")
@@ -23,6 +18,7 @@ func CsvReader() ([][]string, error) {
 	if err != nil {
 		return nil, err
 	}
+
 	return records, nil
 
 }
